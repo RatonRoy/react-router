@@ -1,5 +1,6 @@
 import { Route, Routes } from 'react-router-dom'
 import './App.css'
+import Users from './components/GetUsers/Users'
 import Navbar from './components/Navbar/Navbar'
 import Counter from './components/UseRef/UseRef'
 
@@ -10,12 +11,13 @@ const App = () => {
       {/* <Counter /> */}
       <Routes>
         <Route path='/' element='' />
+        <Route path='/users' element={<Users />} />
       </Routes>
-      <div style={{ minHeight: '100vh' }}>
-        <h1> This is a new text </h1>
+      <div className='content-center'>
+        <h1> This is first section </h1>
       </div>
-      <div style={{ minHeight: '100vh' }}>
-        <h1> This is a new text </h1>
+      <div className='content-center'>
+        <h1> This is second section </h1>
       </div>
     </div>
   )

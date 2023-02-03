@@ -10,9 +10,9 @@ const Navbar = () => {
   const linksContainerRef = useRef(null)
   const linksRef = useRef(null)
 
-  console.log(linksContainerRef.current)
+  // console.log(linksContainerRef.current)
 
-  useEffect(() => {}, [])
+  // useEffect(() => {}, [])
 
   useEffect(() => {
     const linksHeight = linksRef.current.getBoundingClientRect().height
@@ -21,7 +21,7 @@ const Navbar = () => {
     } else {
       linksContainerRef.current.style.height = `0px`
     }
-    console.log(linksHeight)
+    // console.log(linksHeight)
   }, [isToggle])
 
   useEffect(() => {
@@ -70,7 +70,7 @@ const Navbar = () => {
               <Link to='/'> Projects </Link>
             </li>
             <li>
-              <Link to='/'> Blog </Link>
+              <Link to='/users'> Users </Link>
             </li>
             <li>
               <Link to='/'> Random </Link>
