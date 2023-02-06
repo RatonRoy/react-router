@@ -7,6 +7,7 @@ import { FaFacebook, FaLinkedin, FaTwitter, FaBars } from 'react-icons/fa'
 const Navbar = () => {
   const [isToggle, setIsToggle] = useState(false)
   const [stickyClass, setStickyClass] = useState('')
+  const [isOpenLink, setIsOpenLink] = useState(false)
   const linksContainerRef = useRef(null)
   const linksRef = useRef(null)
 
@@ -18,7 +19,8 @@ const Navbar = () => {
     const linksHeight = linksRef.current.getBoundingClientRect().height
     if (isToggle) {
       linksContainerRef.current.style.height = `${linksHeight}px`
-    } else {
+    } 
+    else if() {
       linksContainerRef.current.style.height = `0px`
     }
     // console.log(linksHeight)
@@ -70,7 +72,10 @@ const Navbar = () => {
               <Link to='/'> Projects </Link>
             </li>
             <li>
-              <Link to='/users'> Users </Link>
+              <Link to='/users' onClick={() => setIsOpenLink(!isOpenLink)}>
+                {' '}
+                Users{' '}
+              </Link>
             </li>
             <li>
               <Link to='/'> Random </Link>
